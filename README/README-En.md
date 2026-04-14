@@ -20,6 +20,15 @@ WebDown is a browser extension for saving websites as offline packages. It suppo
 
 ## How to Use
 
+### ZIP Extension Import Tip (Chrome)
+
+To import a ZIP-format Chrome extension:
+1. Unzip the plugin package to a fixed folder
+2. Open `chrome://extensions`
+3. Enable **Developer mode**
+4. Click **Load unpacked**
+5. Select the unzipped extension folder
+
 ### 1. Open the Extension Panel
 Click the WebDown icon in your browser toolbar.
 
