@@ -1,7 +1,9 @@
 - en [English](README/README-En.md)
 
 - zh_CN [简体中文](README/README-zh.md)
+# 点击右侧 releases 查看
 
+releases：https://github.com/webdown-a/webdown/releases
 
 # WebDown：把网页装进你的电脑里
 
