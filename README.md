@@ -1,56 +1,99 @@
-- en [English](README/README-En.md)
+# WebDown Extension + License Server
 
-- zh_CN [简体中文](README/README-zh.md)
-# 点击右侧 releases 查看
+中文 | [English](#english)
 
-releases：https://github.com/webdown-a/webdown/releases
+## 中文
 
-# WebDown：把网页装进你的电脑里
+WebDown 是一个网页资源下载扩展，支持页面资源抓取、下载任务控制（开始/暂停/继续/取消）、授权与试用管理、公告下发与后台管理。
 
-  有没有遇到这种情况：
-  看到一篇好文章、一个实用教程、一个完整资料页，担心它哪天失效，却又不知道怎么完
-  整保存？
+### 主要功能
+- 下载控制：开始、暂停、继续、取消
+- 资源抓取增强：支持 `webRequest` 捕获、`noscript` 解析、根路径重写
+- 授权系统：激活/刷新/状态/试用
+- 运行配置：扩展从后端拉取 `/config/public`
+- 公告系统：支持中英文和换行内容
+- 管理后台：`/admin` 登录页（`x-admin-token`）+ 首页管理
 
-  WebDown 就是为这个场景而生。
-  它不是简单截图，也不是只存一页文本，而是把网页内容和相关资源一起打包，让你在离
-  线状态下也能随时查看。
+### 目录结构
+- `background.js`：扩展后台核心逻辑
+- `popup.html` / `popup.js`：弹窗 UI 与交互
+- `src/`：解析器、编排器、常量与通用模块
+- `dist/`：扩展构建产物
+- `license-server/`：授权与后台服务
 
-  它能做什么：
+### 接口基址
+- `https://extension.hepingan.top/webdown-license`
 
-  - 网页下载：一键抓取当前页面内容
-  - 离线归档：断网也能打开保存结果
-  - 整站抓取：按需延展抓取更多关联页面
-  - 页面保存：保留结构，不止是图片
-  - 资源打包：把页面资源统一整理
-  - ZIP 导出：方便备份、分享、迁移
-  - Chrome 扩展：装上即可用，操作直接
+授权相关接口：
+- `POST /licenses/activate`
+- `POST /licenses/refresh`
+- `POST /licenses/status`
+- `POST /licenses/trial/start`
 
-  对内容创作者来说，它是资料库助手。
-  对研究学习者来说，它是稳定的知识备份。
-  对日常用户来说，它是“看到就能留住”的网页工具。
+运行配置：
+- `GET /config/public`
 
-  WebDown，不追求花哨，只做一件事：
-  让有价值的网页，不再因为时间和网络而丢失。
+### 本地构建
+```bash
+npm install
+npm run build
+```
 
-# 为什么开发这个
+### 后端运行（systemd）
+服务名：`webdown-license.service`
 
-因为类似 ai-website-cloner-template 这样的程序也有很多 但是速度很慢 也测试过 市面上的其他的要么就不完整 要么很慢还是不完整 综上 开发了这个谷歌插件
+环境变量文件：`/etc/default/webdown-license`
+关键项：
+- `LICENSE_SERVER_PORT`
+- `LICENSE_SERVER_DB`
+- `LICENSE_ADMIN_TOKEN`
+- `LICENSE_TRIAL_DAYS_DEFAULT`
 
-Why develop this?
+---
 
-Because there are already many tools like ai-website-cloner-template, but they are quite slow. I’ve tested several existing solutions on the market — they are either incomplete, or slow and still incomplete.
+## English
 
-Based on these issues, I developed this Google extension.
+WebDown is a web resource downloader extension with task controls (start/pause/resume/cancel), licensing/trial support, announcement delivery, and an admin panel.
 
-### Topic: reverse-engineering
+### Key Features
+- Download controls: start, pause, resume, cancel
+- Improved capture: `webRequest` merge, `noscript` parsing, root-relative rewrite
+- License flows: activate / refresh / status / trial
+- Runtime config: extension loads `/config/public`
+- Announcement: bilingual (ZH/EN) with multiline content
+- Admin panel: `/admin` login with `x-admin-token`
 
+### Project Layout
+- `background.js`: core background workflow
+- `popup.html` / `popup.js`: popup UI
+- `src/`: parser, orchestrator, constants
+- `dist/`: built extension assets
+- `license-server/`: backend service
 
-# 下面是复刻的网站(测试)
-Here is a test clone of the website:
+### API Base
+- `https://extension.hepingan.top/webdown-license`
 
-[animejs](https://animejs.com/) Original website
+License APIs:
+- `POST /licenses/activate`
+- `POST /licenses/refresh`
+- `POST /licenses/status`
+- `POST /licenses/trial/start`
 
-[animejs](https://anime-js-4m7.pages.dev/) Clone
+Runtime config:
+- `GET /config/public`
 
+### Build
+```bash
+npm install
+npm run build
+```
 
+### Backend (systemd)
+Service: `webdown-license.service`
 
+Environment file: `/etc/default/webdown-license`
+Main variables:
+- `LICENSE_SERVER_PORT`
+- `LICENSE_SERVER_DB`
+- `LICENSE_ADMIN_TOKEN`
+- `LICENSE_TRIAL_DAYS_DEFAULT`
