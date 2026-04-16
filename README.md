@@ -1,99 +1,47 @@
-# WebDown Extension + License Server
+# WebDown
 
-中文 | [English](#english)
+让网页内容真正“保存下来”。
 
-## 中文
+你可能经常遇到这些情况：
+- 收藏了很多网页，过几天链接失效
+- 找到一篇好教程，想离线慢慢看
+- 做项目调研时，资料分散、难整理
+- 想把一个页面完整留存，而不是只截一张图
 
-WebDown 是一个网页资源下载扩展，支持页面资源抓取、下载任务控制（开始/暂停/继续/取消）、授权与试用管理、公告下发与后台管理。
+WebDown 做的事情很简单：
+把你正在看的网页和关键资源打包保存，方便你之后随时打开、查阅、归档。
 
-### 主要功能
-- 下载控制：开始、暂停、继续、取消
-- 资源抓取增强：支持 `webRequest` 捕获、`noscript` 解析、根路径重写
-- 授权系统：激活/刷新/状态/试用
-- 运行配置：扩展从后端拉取 `/config/public`
-- 公告系统：支持中英文和换行内容
-- 管理后台：`/admin` 登录页（`x-admin-token`）+ 首页管理
+## 你可以怎么用
 
-### 目录结构
-- `background.js`：扩展后台核心逻辑
-- `popup.html` / `popup.js`：弹窗 UI 与交互
-- `src/`：解析器、编排器、常量与通用模块
-- `dist/`：扩展构建产物
-- `license-server/`：授权与后台服务
+### 1) 临时保存灵感
+看到一篇有价值的文章，直接下载保存。以后不管原网页是否改版、删除，都能快速回看。
 
-### 接口基址
-- `https://extension.hepingan.top/webdown-license`
+### 2) 离线阅读资料
+在网络不稳定或出行场景下，提前把需要的网页保存到本地，随时打开，不受网络影响。
 
-授权相关接口：
-- `POST /licenses/activate`
-- `POST /licenses/refresh`
-- `POST /licenses/status`
-- `POST /licenses/trial/start`
+### 3) 做学习与研究归档
+把教程、文档、案例页按主题保存，形成自己的资料库，后续检索和复用更高效。
 
-运行配置：
-- `GET /config/public`
+### 4) 给团队留可复用材料
+将关键页面整理后分享给同事，减少“链接过期、内容找不到”的沟通成本。
 
-### 本地构建
-```bash
-npm install
-npm run build
-```
+## 使用步骤
 
-### 后端运行（systemd）
-服务名：`webdown-license.service`
+1. 在浏览器中打开你想保存的网页。
+2. 点击 WebDown。
+3. 输入保存地址或保持默认。
+4. 点击下载，等待完成。
 
-环境变量文件：`/etc/default/webdown-license`
-关键项：
-- `LICENSE_SERVER_PORT`
-- `LICENSE_SERVER_DB`
-- `LICENSE_ADMIN_TOKEN`
-- `LICENSE_TRIAL_DAYS_DEFAULT`
+如果任务较大，你也可以在过程中进行暂停、继续或取消，按你的节奏处理。
 
----
+## 适合谁
 
-## English
+- 内容创作者：沉淀素材，减少丢失
+- 学生与研究者：建立可离线的知识库
+- 产品/运营/开发：保存竞品与案例页面
+- 任何想长期留存网页内容的人
 
-WebDown is a web resource downloader extension with task controls (start/pause/resume/cancel), licensing/trial support, announcement delivery, and an admin panel.
+## 一句话总结
 
-### Key Features
-- Download controls: start, pause, resume, cancel
-- Improved capture: `webRequest` merge, `noscript` parsing, root-relative rewrite
-- License flows: activate / refresh / status / trial
-- Runtime config: extension loads `/config/public`
-- Announcement: bilingual (ZH/EN) with multiline content
-- Admin panel: `/admin` login with `x-admin-token`
-
-### Project Layout
-- `background.js`: core background workflow
-- `popup.html` / `popup.js`: popup UI
-- `src/`: parser, orchestrator, constants
-- `dist/`: built extension assets
-- `license-server/`: backend service
-
-### API Base
-- `https://extension.hepingan.top/webdown-license`
-
-License APIs:
-- `POST /licenses/activate`
-- `POST /licenses/refresh`
-- `POST /licenses/status`
-- `POST /licenses/trial/start`
-
-Runtime config:
-- `GET /config/public`
-
-### Build
-```bash
-npm install
-npm run build
-```
-
-### Backend (systemd)
-Service: `webdown-license.service`
-
-Environment file: `/etc/default/webdown-license`
-Main variables:
-- `LICENSE_SERVER_PORT`
-- `LICENSE_SERVER_DB`
-- `LICENSE_ADMIN_TOKEN`
-- `LICENSE_TRIAL_DAYS_DEFAULT`
+WebDown 不是“先收藏，后失效”的工具，
+而是“现在保存，长期可用”的网页归档助手。
