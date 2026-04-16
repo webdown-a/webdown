@@ -1,5 +1,11 @@
 # WebDown
 
+# CN
+- zh_CN [简体中文](README/README-zh.md)
+# EN
+
+- EN [English](README/README-En.md)
+
 让网页内容真正“保存下来”。
 
 你可能经常遇到这些情况：
