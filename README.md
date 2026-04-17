@@ -1,5 +1,6 @@
 # WebDown
-
+# Command to start after downloading zip
+python3 -m http.server xxxx
 # CN
 - zh_CN [简体中文](README/README-zh.md)
 # EN
