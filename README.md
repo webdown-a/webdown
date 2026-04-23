@@ -1,54 +1,63 @@
+<div align="center">
+
 # WebDown
-# Command to start after downloading zip
-python3 -m http.server xxxx
-# CN
-- zh_CN [简体中文](README/README-zh.md)
-# EN
 
-- EN [English](README/README-En.md)
+**把网页真正保存下来，随时离线查看。**
 
-让网页内容真正“保存下来”。
+Save web pages for real — browse them offline, anytime.
 
-你可能经常遇到这些情况：
-- 收藏了很多网页，过几天链接失效
-- 找到一篇好教程，想离线慢慢看
-- 做项目调研时，资料分散、难整理
-- 想把一个页面完整留存，而不是只截一张图
+[简体中文](README/README-zh.md) | [English](README/README-En.md)
 
-WebDown 做的事情很简单：
-把你正在看的网页和关键资源打包保存，方便你之后随时打开、查阅、归档。
+</div>
 
-## 你可以怎么用
+---
 
-### 1) 临时保存灵感
-看到一篇有价值的文章，直接下载保存。以后不管原网页是否改版、删除，都能快速回看。
+## 它能做什么 / What It Does
 
-### 2) 离线阅读资料
-在网络不稳定或出行场景下，提前把需要的网页保存到本地，随时打开，不受网络影响。
+WebDown 是一个 Chrome 浏览器扩展，可以把你正在看的网页（或整个站点）连同图片、样式、字体等资源一起打包成 ZIP 文件，下载到本地后直接离线浏览。
 
-### 3) 做学习与研究归档
-把教程、文档、案例页按主题保存，形成自己的资料库，后续检索和复用更高效。
+WebDown is a Chrome extension that packages the page you're viewing (or an entire site) — including images, styles, fonts, and other assets — into a ZIP file you can browse offline.
 
-### 4) 给团队留可复用材料
-将关键页面整理后分享给同事，减少“链接过期、内容找不到”的沟通成本。
+---
 
-## 使用步骤
+## 安装 / Install
 
-1. 在浏览器中打开你想保存的网页。
-2. 点击 WebDown。
-3. 输入保存地址或保持默认。
-4. 点击下载，等待完成。
+1. 下载最新的 `webdown-extension-vX.X.X.zip`，在 [Releases](https://github.com/webdown-a/webdown/releases) 页面获取
+2. 解压到一个固定目录
+3. 打开 `chrome://extensions`，开启「开发者模式」
+4. 点击「加载已解压的扩展程序」，选择解压后的文件夹
 
-如果任务较大，你也可以在过程中进行暂停、继续或取消，按你的节奏处理。
+---
 
-## 适合谁
+1. Download the latest `webdown-extension-vX.X.X.zip` from [Releases](https://github.com/webdown-a/webdown/releases)
+2. Unzip to a permanent folder
+3. Open `chrome://extensions` and enable **Developer mode**
+4. Click **Load unpacked** and select the unzipped folder
 
-- 内容创作者：沉淀素材，减少丢失
-- 学生与研究者：建立可离线的知识库
-- 产品/运营/开发：保存竞品与案例页面
-- 任何想长期留存网页内容的人
+---
 
-## 一句话总结
+## 快速开始 / Quick Start
 
-WebDown 不是“先收藏，后失效”的工具，
-而是“现在保存，长期可用”的网页归档助手。
+1. 打开你想保存的网页
+2. 点击浏览器工具栏中的 WebDown 图标
+3. 选择「保存当前页」或「整站抓取」
+4. 点击「开始」，等待完成后 ZIP 文件会自动下载
+
+---
+
+1. Open the page you want to save
+2. Click the WebDown icon in the toolbar
+3. Choose **Save Current Page** or **Site Crawl**
+4. Click **Start** — a ZIP file downloads when it's done
+
+---
+
+## 联系 / Contact
+
+邮箱 / Email: ctzl2022@gmail.com
+
+## 声明 / Disclaimer
+
+本工具仅用于合法学习与技术交流，严禁用于任何非法用途。使用者须自行遵守当地法律法规，开发者不承担由滥用行为引发的法律责任。
+
+This tool is for lawful learning and technical communication only. Users must comply with local laws. The developer assumes no liability for misuse.
