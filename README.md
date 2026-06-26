@@ -60,6 +60,14 @@ WebDown is a Chrome extension that packages the page you're viewing (or an entir
 
 https://webdown.qinuli.top
 
+# Telegram 交流群
+
+https://t.me/webdown_a
+
+# 致谢 
+
+https://linux.do/
+
 ## 声明 / Disclaimer
 
 本工具仅用于合法学习与技术交流，严禁用于任何非法用途。使用者须自行遵守当地法律法规，开发者不承担由滥用行为引发的法律责任。
