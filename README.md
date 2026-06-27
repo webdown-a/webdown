@@ -60,9 +60,6 @@ WebDown is a Chrome extension that packages the page you're viewing (or an entir
 
 https://webdown.qinuli.top
 
-# Telegram 交流群
-
-https://t.me/webdown_a
 
 # 致谢 
 
