@@ -3,6 +3,7 @@
 # WebDown https://webdown.qinuli.top
 
 **把网页真正保存下来，随时离线查看。**
+**目前L站被封说我涉嫌推广，大家暂时等等还在等调查，我相信管理员会进行查看，不会让真正分享的人寒心**
 
 Save web pages for real — browse them offline, anytime.
 
