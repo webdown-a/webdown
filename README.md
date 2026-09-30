@@ -62,9 +62,9 @@ WebDown is a Chrome extension that packages the page you're viewing (or an entir
 https://webdown.qinuli.top
 
 
-# 致谢 
+# 谷歌商店
 
-https://linux.do/
+https://chromewebstore.google.com/detail/webdown/bcckfmcjmloiennbmbaemfehlnkkmdme?hl=zh-CN&utm_source=ext_sidebar
 
 ## 声明 / Disclaimer
 
